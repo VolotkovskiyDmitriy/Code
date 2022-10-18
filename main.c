@@ -26,16 +26,9 @@ while(1) {
 
 	if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 0) {
 		if (GPIO_ReadOutputDataBit(GPIOD, GPIO_Pin_12)) {
-			GPIO_ResetBits(GPIOD, GPIO_Pin_12);
-			GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-			GPIO_ResetBits(GPIOD, GPIO_Pin_14);
-			GPIO_ResetBits(GPIOD, GPIO_Pin_15);
 		}
 		else {
 			GPIO_SetBits(GPIOD, GPIO_Pin_12);
-			GPIO_SetBits(GPIOD, GPIO_Pin_13);
-			GPIO_SetBits(GPIOD, GPIO_Pin_14);
-			GPIO_SetBits(GPIOD, GPIO_Pin_15);
 		}
 		while(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)==0);
 
